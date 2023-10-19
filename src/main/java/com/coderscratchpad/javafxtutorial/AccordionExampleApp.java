@@ -13,6 +13,9 @@ import javafx.stage.Stage;
  */
 public class AccordionExampleApp extends Application {
 
+    private static final double WIDTH = 640;
+    private static final double HEIGHT = 480;
+
     private Scene scene;
 
     @Override
@@ -56,7 +59,7 @@ public class AccordionExampleApp extends Application {
         BorderPane layoutManager = new BorderPane(mainContent);
 
         // Create the scene with specified dimensions
-        this.scene = new Scene(layoutManager, 640, 480);
+        this.scene = new Scene(layoutManager, WIDTH, HEIGHT);
     }
 
     @Override

@@ -14,6 +14,9 @@ import javafx.stage.Stage;
  */
 public class CanvasBasicShapes extends Application {
 
+    private static final double WIDTH = 640;
+    private static final double HEIGHT = 480;
+
     private final BorderPane parent = new BorderPane();
 
     @Override
@@ -61,7 +64,7 @@ public class CanvasBasicShapes extends Application {
     private void setupStage(Stage stage) {
 
         // Create a scene with the BorderPane as the root
-        Scene scene = new Scene(this.parent, 640, 480);
+        Scene scene = new Scene(this.parent, WIDTH, HEIGHT);
 
         // Set the stage title
         stage.setTitle("Getting Started with JavaFX Canvas");
