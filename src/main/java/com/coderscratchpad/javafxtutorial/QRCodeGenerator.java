@@ -24,6 +24,9 @@ import java.io.IOException;
  */
 public class QRCodeGenerator extends Application {
 
+    private static final double WIDTH = 640;
+    private static final double HEIGHT = 480;
+
     private static final int QR_CODE_SIZE = 300;
     private static final String CONTENT_TO_ENCODE = "JavaFX QR Code Generator";
 
@@ -84,7 +87,7 @@ public class QRCodeGenerator extends Application {
 
     private void setupStage(Stage stage) {
 
-        Scene scene = new Scene(this.parent, 640.0, 480.0);
+        Scene scene = new Scene(this.parent, WIDTH, HEIGHT);
 
         // Sets the stage title
         stage.setTitle("JavaFX QR Code Generator");
