@@ -3,8 +3,11 @@ package com.coderscratchpad.javafxtutorial;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
-import javafx.scene.layout.*;
+import javafx.scene.control.Accordion;
+import javafx.scene.control.Label;
+import javafx.scene.control.TitledPane;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 /**
@@ -19,13 +22,21 @@ public class AccordionExampleApp extends Application {
     private Scene scene;
 
     @Override
+    public void start(Stage stage) throws Exception {
+        // Set the scene for the stage
+        stage.setScene(this.scene);
+        stage.setTitle("Getting Started with Accordions in JavaFX for Beginners");
+        stage.centerOnScreen();
+        stage.show();
+    }
+
+    @Override
     public void init() throws Exception {
         super.init();
         buildUI();
     }
 
     private void buildUI() {
-
         // Create the main content pane using a VBox with vertical spacing of 10 and padding of 15
         VBox mainContent = new VBox(10);
         mainContent.setPadding(new Insets(15));
@@ -60,17 +71,5 @@ public class AccordionExampleApp extends Application {
 
         // Create the scene with specified dimensions
         this.scene = new Scene(layoutManager, WIDTH, HEIGHT);
-    }
-
-    @Override
-    public void start(Stage stage) throws Exception {
-
-        // Set the scene for the stage
-        stage.setScene(this.scene);
-
-        stage.setTitle("Getting Started with Accordions in JavaFX for Beginners");
-
-        stage.centerOnScreen();
-        stage.show();
     }
 }
