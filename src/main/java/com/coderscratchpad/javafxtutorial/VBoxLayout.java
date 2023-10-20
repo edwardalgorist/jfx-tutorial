@@ -83,15 +83,16 @@ public class VBoxLayout extends Application {
             init(label, obscure);
         }
 
+        public String getText() {
+            return this.textField.getText();
+        }
+
         private void init(String label, boolean obscure) {
             this.textField = obscure ? new PasswordField() : new TextField();
             this.textField.setPadding(new Insets(6));
             this.getChildren().addAll(new Label(label), textField);
         }
 
-        public String getText() {
-            return this.textField.getText();
-        }
     }
 
 }
