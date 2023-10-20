@@ -26,5 +26,4 @@ public class BasicGui extends Application {
         stage.show();
 
     }
-
 }

@@ -19,6 +19,18 @@ public class AccordionExampleApp extends Application {
     private Scene scene;
 
     @Override
+    public void start(Stage stage) throws Exception {
+
+        // Set the scene for the stage
+        stage.setScene(this.scene);
+
+        stage.setTitle("Getting Started with Accordions in JavaFX for Beginners");
+
+        stage.centerOnScreen();
+        stage.show();
+    }
+
+    @Override
     public void init() throws Exception {
         super.init();
         buildUI();
@@ -62,15 +74,4 @@ public class AccordionExampleApp extends Application {
         this.scene = new Scene(layoutManager, WIDTH, HEIGHT);
     }
 
-    @Override
-    public void start(Stage stage) throws Exception {
-
-        // Set the scene for the stage
-        stage.setScene(this.scene);
-
-        stage.setTitle("Getting Started with Accordions in JavaFX for Beginners");
-
-        stage.centerOnScreen();
-        stage.show();
-    }
 }

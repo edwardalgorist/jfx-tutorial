@@ -40,6 +40,23 @@ public class ChoiceDialogBasicExample extends Application {
     private String selectedFruit;
 
     @Override
+    public void start(Stage stage) throws Exception {
+
+        // set the scene for the stage
+        stage.setScene(this.scene);
+
+        // set the title for the stage
+        stage.setTitle("JavaFX ChoiceDialog");
+
+        // center the stage on screen on startup
+        stage.centerOnScreen();
+
+        // show the stage
+        stage.show();
+
+    }
+
+    @Override
     public void init() throws Exception {
         super.init();
         buildUI();
@@ -93,23 +110,6 @@ public class ChoiceDialogBasicExample extends Application {
             this.selectedFruit = selectedFruit;
             this.label.setText("The selected fruit is " + this.selectedFruit);
         });
-
-    }
-
-    @Override
-    public void start(Stage stage) throws Exception {
-
-        // set the scene for the stage
-        stage.setScene(this.scene);
-
-        // set the title for the stage
-        stage.setTitle("JavaFX ChoiceDialog");
-
-        // center the stage on screen on startup
-        stage.centerOnScreen();
-
-        // show the stage
-        stage.show();
 
     }
 

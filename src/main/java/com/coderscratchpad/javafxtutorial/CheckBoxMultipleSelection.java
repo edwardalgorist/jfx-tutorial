@@ -46,6 +46,23 @@ public class CheckBoxMultipleSelection extends Application {
     private Label label;
 
     @Override
+    public void start(Stage stage) throws Exception {
+
+        // set the scene for the stage
+        stage.setScene(this.scene);
+
+        // set the title for the stage
+        stage.setTitle("A Guide to Using Checkboxes for Multiple Selection in JavaFX");
+
+        // center the stage on screen on startup
+        stage.centerOnScreen();
+
+        // show the stage
+        stage.show();
+
+    }
+
+    @Override
     public void init() throws Exception {
         super.init();
         buildUI();
@@ -139,23 +156,6 @@ public class CheckBoxMultipleSelection extends Application {
 
         // enable or disable the button based on selected languages
         this.button.setDisable(selectedLanguages.isEmpty());
-
-    }
-
-    @Override
-    public void start(Stage stage) throws Exception {
-
-        // set the scene for the stage
-        stage.setScene(this.scene);
-
-        // set the title for the stage
-        stage.setTitle("A Guide to Using Checkboxes for Multiple Selection in JavaFX");
-
-        // center the stage on screen on startup
-        stage.centerOnScreen();
-
-        // show the stage
-        stage.show();
 
     }
 

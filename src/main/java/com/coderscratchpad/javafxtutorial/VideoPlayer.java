@@ -119,4 +119,5 @@ class MediaPlayerControls extends HBox {
             setOnAction(handler);
         }
     }
+
 }

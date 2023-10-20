@@ -46,4 +46,5 @@ public class ImageDisplay extends Application {
         // Show the application window
         stage.show();
     }
+
 }

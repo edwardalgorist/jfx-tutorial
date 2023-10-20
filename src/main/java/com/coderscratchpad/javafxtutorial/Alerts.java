@@ -25,6 +25,17 @@ public class Alerts extends Application {
     private Alert alert;
 
     @Override
+    public void start(Stage stage) throws Exception {
+
+        // set the scene for the stage
+        stage.setScene(this.scene);
+        stage.setTitle("Getting Started with JavaFX Alerts");
+        stage.centerOnScreen();
+        stage.show();
+
+    }
+
+    @Override
     public void init() throws Exception {
         super.init();
         buildUI();
@@ -123,17 +134,6 @@ public class Alerts extends Application {
             if(buttonType == ButtonType.YES) System.out.println("Closing the program...");
 
         });
-
-    }
-
-    @Override
-    public void start(Stage stage) throws Exception {
-
-        // set the scene for the stage
-        stage.setScene(this.scene);
-        stage.setTitle("Getting Started with JavaFX Alerts");
-        stage.centerOnScreen();
-        stage.show();
 
     }
 

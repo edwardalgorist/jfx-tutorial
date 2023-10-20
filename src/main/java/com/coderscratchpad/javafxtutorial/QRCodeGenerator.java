@@ -33,9 +33,32 @@ public class QRCodeGenerator extends Application {
     private final StackPane parent = new StackPane();
 
     @Override
+    public void start(Stage stage) throws Exception {
+        this.setupStage(stage);
+    }
+
+    @Override
     public void init() throws Exception {
         super.init();
         this.buildUI();
+    }
+
+    private void setupStage(Stage stage) {
+
+        Scene scene = new Scene(this.parent, WIDTH, HEIGHT);
+
+        // Sets the stage title
+        stage.setTitle("JavaFX QR Code Generator");
+
+        // Sets the stage scene
+        stage.setScene(scene);
+
+        // Centers stage on screen
+        stage.centerOnScreen();
+
+        // Show stage on screen
+        stage.show();
+
     }
 
     private void buildUI() {
@@ -80,29 +103,6 @@ public class QRCodeGenerator extends Application {
 
     }
 
-    @Override
-    public void start(Stage stage) throws Exception {
-        this.setupStage(stage);
-    }
-
-    private void setupStage(Stage stage) {
-
-        Scene scene = new Scene(this.parent, WIDTH, HEIGHT);
-
-        // Sets the stage title
-        stage.setTitle("JavaFX QR Code Generator");
-
-        // Sets the stage scene
-        stage.setScene(scene);
-
-        // Centers stage on screen
-        stage.centerOnScreen();
-
-        // Show stage on screen
-        stage.show();
-
-    }
-
 }
 
 class QRGenerator {
@@ -120,6 +120,14 @@ class QRGenerator {
 
     }
 
+    public void save(String pathname, String formatName) throws IOException {
+        ImageIO.write(qrImage, formatName, new File(pathname));
+    }
+
+    public BufferedImage qrImage() {
+        return this.qrImage;
+    }
+
     private void qrImageCreate(int width, int height, int imageType) {
 
         // Convert BitMatrix to BufferedImage
@@ -135,14 +143,6 @@ class QRGenerator {
 
         }
 
-    }
-
-    public void save(String pathname, String formatName) throws IOException {
-        ImageIO.write(qrImage, formatName, new File(pathname));
-    }
-
-    public BufferedImage qrImage() {
-        return this.qrImage;
     }
 
     private static class BitMatrixBuilder implements Builder<BitMatrix> {

@@ -23,6 +23,17 @@ public class ButtonBasicExample extends Application {
     private Label label;
 
     @Override
+    public void start(Stage stage) throws Exception {
+
+        // set the scene for the stage
+        stage.setScene(this.scene);
+        stage.setTitle("Getting Started with JavaFX Buttons");
+        stage.centerOnScreen();
+        stage.show();
+
+    }
+
+    @Override
     public void init() throws Exception {
         super.init();
         buildUI();
@@ -56,17 +67,6 @@ public class ButtonBasicExample extends Application {
     // button handler
     private void buttonHandler(ActionEvent actionEvent) {
         this.label.setText("Oh, you just did. I am offended!");
-    }
-
-    @Override
-    public void start(Stage stage) throws Exception {
-
-        // set the scene for the stage
-        stage.setScene(this.scene);
-        stage.setTitle("Getting Started with JavaFX Buttons");
-        stage.centerOnScreen();
-        stage.show();
-
     }
 
 }

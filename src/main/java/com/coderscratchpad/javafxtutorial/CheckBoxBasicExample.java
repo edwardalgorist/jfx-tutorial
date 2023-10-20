@@ -20,6 +20,18 @@ public class CheckBoxBasicExample extends Application {
     private Scene scene;
 
     @Override
+    public void start(Stage stage) throws Exception {
+
+        // set the scene for the stage
+        stage.setScene(this.scene);
+
+        stage.setTitle("Getting Started with JavaFX CheckBoxes");
+
+        stage.centerOnScreen();
+        stage.show();
+    }
+
+    @Override
     public void init() throws Exception {
         super.init();
         buildUI();
@@ -57,15 +69,4 @@ public class CheckBoxBasicExample extends Application {
 
     }
 
-    @Override
-    public void start(Stage stage) throws Exception {
-
-        // set the scene for the stage
-        stage.setScene(this.scene);
-
-        stage.setTitle("Getting Started with JavaFX CheckBoxes");
-
-        stage.centerOnScreen();
-        stage.show();
-    }
 }

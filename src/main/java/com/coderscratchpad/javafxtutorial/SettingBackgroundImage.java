@@ -20,6 +20,17 @@ public class SettingBackgroundImage extends Application {
     private Scene scene;
 
     @Override
+    public void start(Stage stage) throws Exception {
+
+        stage.setScene(this.scene);
+        stage.setTitle("Creating a Stylish User Registration Form with Background Image in JavaFX");
+        stage.centerOnScreen();
+
+        stage.show();
+
+    }
+
+    @Override
     public void init() throws Exception {
         super.init();
         buildUI();
@@ -92,17 +103,6 @@ public class SettingBackgroundImage extends Application {
         // apply the background image to the region
         Background background = new Background(backgroundImage);
         region.setBackground(background);
-    }
-
-    @Override
-    public void start(Stage stage) throws Exception {
-
-        stage.setScene(this.scene);
-        stage.setTitle("Creating a Stylish User Registration Form with Background Image in JavaFX");
-        stage.centerOnScreen();
-
-        stage.show();
-
     }
 
     static class VTextField extends VBox {

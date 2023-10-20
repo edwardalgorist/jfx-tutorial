@@ -40,6 +40,23 @@ public class ChoiceBoxBasicExample extends Application {
     private Label buttonLabel;
 
     @Override
+    public void start(Stage stage) throws Exception {
+
+        // set the scene for the stage
+        stage.setScene(this.scene);
+
+        // set the title for the stage
+        stage.setTitle("JavaFX ChoiceBox");
+
+        // center the stage on screen on startup
+        stage.centerOnScreen();
+
+        // show the stage
+        stage.show();
+
+    }
+
+    @Override
     public void init() throws Exception {
         super.init();
         buildUI();
@@ -96,23 +113,6 @@ public class ChoiceBoxBasicExample extends Application {
     private void onFruitChanged(ObservableValue<? extends String> observableValue, String oldSelectedFruit, String newSelectedFruit) {
         // prints selected fruit out to the console whenever there is a change
         System.out.println(newSelectedFruit);
-    }
-
-    @Override
-    public void start(Stage stage) throws Exception {
-
-        // set the scene for the stage
-        stage.setScene(this.scene);
-
-        // set the title for the stage
-        stage.setTitle("JavaFX ChoiceBox");
-
-        // center the stage on screen on startup
-        stage.centerOnScreen();
-
-        // show the stage
-        stage.show();
-
     }
 
 }

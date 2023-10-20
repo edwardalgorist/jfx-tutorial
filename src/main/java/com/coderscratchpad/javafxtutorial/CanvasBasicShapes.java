@@ -20,6 +20,14 @@ public class CanvasBasicShapes extends Application {
     private final BorderPane parent = new BorderPane();
 
     @Override
+    public void start(Stage stage) throws Exception {
+
+        // Setup and display the stage
+        this.setupStage(stage);
+
+    }
+
+    @Override
     public void init() throws Exception {
         super.init();
 
@@ -50,14 +58,6 @@ public class CanvasBasicShapes extends Application {
 
         // Add the Canvas to the center of the BorderPane
         this.parent.setCenter(canvas);
-
-    }
-
-    @Override
-    public void start(Stage stage) throws Exception {
-
-        // Setup and display the stage
-        this.setupStage(stage);
 
     }
 

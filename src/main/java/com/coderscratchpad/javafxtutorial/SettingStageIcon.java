@@ -33,5 +33,4 @@ public class SettingStageIcon extends Application {
         stage.show();
 
     }
-
 }
