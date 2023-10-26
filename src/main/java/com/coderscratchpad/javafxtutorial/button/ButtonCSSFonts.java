@@ -1,9 +1,6 @@
-package com.coderscratchpad.javafxtutorial;
+package com.coderscratchpad.javafxtutorial.button;
 
 import javafx.application.Application;
-import javafx.application.Platform;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
@@ -11,9 +8,9 @@ import javafx.stage.Stage;
 
 /**
  * Code of the tutorial described on
- * <a href="https://coderscratchpad.com/handling-javafx-button-events/">coderscratchpad.com</a>
+ * <a href="https://coderscratchpad.com/styling-javafx-buttons-with-css/">coderscratchpad.com</a>
  */
-public class ButtonEventsEventHandlerInterface extends Application {
+public class ButtonCSSFonts extends Application {
 
     private static final double WIDTH = 640;
     private static final double HEIGHT = 480;
@@ -36,7 +33,7 @@ public class ButtonEventsEventHandlerInterface extends Application {
         Scene scene = new Scene(this.parent, WIDTH, HEIGHT);
 
         // Sets the stage title
-        stage.setTitle("Handling JavaFX Button Events");
+        stage.setTitle("Styling JavaFX Buttons with CSS");
 
         // Sets the stage scene
         stage.setScene(scene);
@@ -51,24 +48,18 @@ public class ButtonEventsEventHandlerInterface extends Application {
 
     private void buildUI() {
 
-        Button button = new Button("Exit");
+        Button button = new Button("Close Project");
 
-        // Sets the button handler when clicked
-        button.setOnAction(new ButtonHandler());
+        // Sets the button text font family to 'Comic Sans MS'
+        // The size to 18px
+        // And the font style to 'italic'
+        button.setStyle(
+                "-fx-font-family: 'Comic Sans MS'; " +
+                        "-fx-font-size: 18px;" +
+                        "-fx-font-style: italic;"
+        );
 
         this.parent.setCenter(button);
-
-    }
-
-}
-
-class ButtonHandler implements EventHandler<ActionEvent> {
-
-    @Override
-    public void handle(ActionEvent event) {
-
-        // Call Platform.exit() to close the JavaFX application
-        Platform.exit();
 
     }
 

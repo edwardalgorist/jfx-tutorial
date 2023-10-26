@@ -1,18 +1,16 @@
-package com.coderscratchpad.javafxtutorial;
+package com.coderscratchpad.javafxtutorial.datepicker;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.DatePicker;
-import javafx.scene.layout.*;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
-
-import java.time.LocalDate;
 
 /**
  * Code of the tutorial described on
  * <a href="https://coderscratchpad.com/javafx-datepicker/">coderscratchpad.com</a>
  */
-public class DatePickerDateSelection extends Application {
+public class BasicDatePicker extends Application {
 
     private static final double WIDTH = 640;
     private static final double HEIGHT = 480;
@@ -51,13 +49,6 @@ public class DatePickerDateSelection extends Application {
     private void buildUI() {
 
         DatePicker datePicker = new DatePicker();
-
-        datePicker.setOnAction(event -> {
-
-            LocalDate selectedDate = datePicker.getValue();
-            System.out.println("Selected Date: " + selectedDate);
-
-        });
 
         this.parent.getChildren().addAll(datePicker);
 

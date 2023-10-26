@@ -1,10 +1,9 @@
-package com.coderscratchpad.javafxtutorial;
+package com.coderscratchpad.javafxtutorial.datepicker;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.control.DateCell;
 import javafx.scene.control.DatePicker;
-import javafx.scene.layout.*;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 import java.time.LocalDate;
@@ -13,7 +12,7 @@ import java.time.LocalDate;
  * Code of the tutorial described on
  * <a href="https://coderscratchpad.com/javafx-datepicker/">coderscratchpad.com</a>
  */
-public class DatePickerRestrictingRange extends Application {
+public class DatePickerDateSelection extends Application {
 
     private static final double WIDTH = 640;
     private static final double HEIGHT = 480;
@@ -53,18 +52,10 @@ public class DatePickerRestrictingRange extends Application {
 
         DatePicker datePicker = new DatePicker();
 
-        datePicker.setDayCellFactory(picker -> new DateCell() {
+        datePicker.setOnAction(event -> {
 
-            @Override
-            public void updateItem(LocalDate date, boolean empty) {
-                super.updateItem(date, empty);
-
-                LocalDate minDate = LocalDate.now().minusDays(5);
-                LocalDate maxDate = LocalDate.now().plusDays(5);
-
-                setDisable(date.isBefore(minDate) || date.isAfter(maxDate));
-
-            }
+            LocalDate selectedDate = datePicker.getValue();
+            System.out.println("Selected Date: " + selectedDate);
 
         });
 

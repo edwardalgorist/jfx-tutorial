@@ -1,4 +1,4 @@
-package com.coderscratchpad.javafxtutorial;
+package com.coderscratchpad.javafxtutorial.button;
 
 import javafx.application.Application;
 import javafx.scene.Scene;

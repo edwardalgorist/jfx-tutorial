@@ -1,6 +1,7 @@
-package com.coderscratchpad.javafxtutorial;
+package com.coderscratchpad.javafxtutorial.button;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
@@ -8,9 +9,10 @@ import javafx.stage.Stage;
 
 /**
  * Code of the tutorial described on
- * <a href="https://coderscratchpad.com/styling-javafx-buttons-with-css/">coderscratchpad.com</a>
+ * <a href="https://coderscratchpad.com/handling-javafx-button-events/">coderscratchpad.com</a>
  */
-public class ButtonCSSColors extends Application {
+public class ButtonEventsLambda extends Application {
+
 
     private static final double WIDTH = 640;
     private static final double HEIGHT = 480;
@@ -33,7 +35,7 @@ public class ButtonCSSColors extends Application {
         Scene scene = new Scene(this.parent, WIDTH, HEIGHT);
 
         // Sets the stage title
-        stage.setTitle("Styling JavaFX Buttons with CSS");
+        stage.setTitle("Handling JavaFX Button Events");
 
         // Sets the stage scene
         stage.setScene(scene);
@@ -48,18 +50,17 @@ public class ButtonCSSColors extends Application {
 
     private void buildUI() {
 
-        Button button = new Button("Close Project");
+        Button button = new Button("Exit");
 
-        // Sets the button background color to blue
-        // And the text color to white
-        button.setStyle(
-                "-fx-background-color: blue;" +
-                "-fx-text-fill: white;"
-        );
+        button.setOnAction(event -> {
+
+            // Call Platform.exit() to close the JavaFX application
+            Platform.exit();
+
+        });
 
         this.parent.setCenter(button);
 
     }
 
 }
-

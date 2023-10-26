@@ -1,7 +1,9 @@
-package com.coderscratchpad.javafxtutorial;
+package com.coderscratchpad.javafxtutorial.button;
 
 import javafx.application.Application;
 import javafx.application.Platform;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
@@ -11,8 +13,7 @@ import javafx.stage.Stage;
  * Code of the tutorial described on
  * <a href="https://coderscratchpad.com/handling-javafx-button-events/">coderscratchpad.com</a>
  */
-public class ButtonEventsLambda extends Application {
-
+public class ButtonEventsEventHandlerInterface extends Application {
 
     private static final double WIDTH = 640;
     private static final double HEIGHT = 480;
@@ -52,14 +53,22 @@ public class ButtonEventsLambda extends Application {
 
         Button button = new Button("Exit");
 
-        button.setOnAction(event -> {
-
-            // Call Platform.exit() to close the JavaFX application
-            Platform.exit();
-
-        });
+        // Sets the button handler when clicked
+        button.setOnAction(new ButtonHandler());
 
         this.parent.setCenter(button);
+
+    }
+
+}
+
+class ButtonHandler implements EventHandler<ActionEvent> {
+
+    @Override
+    public void handle(ActionEvent event) {
+
+        // Call Platform.exit() to close the JavaFX application
+        Platform.exit();
 
     }
 

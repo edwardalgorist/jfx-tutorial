@@ -8,6 +8,11 @@ module com.coderscratchpad.javafxtutorial {
     requires javafx.web;
     requires java.prefs;
 
-    opens com.coderscratchpad.javafxtutorial to javafx.fxml;
     exports com.coderscratchpad.javafxtutorial;
+    exports com.coderscratchpad.javafxtutorial.button;
+    exports com.coderscratchpad.javafxtutorial.datepicker;
+
+    opens com.coderscratchpad.javafxtutorial to javafx.fxml;
+    opens com.coderscratchpad.javafxtutorial.button to javafx.fxml;
+    opens com.coderscratchpad.javafxtutorial.datepicker to javafx.fxml;
 }
