@@ -11,6 +11,7 @@ module com.coderscratchpad.javafxtutorial {
     exports com.coderscratchpad.javafxtutorial;
     exports com.coderscratchpad.javafxtutorial.button;
     exports com.coderscratchpad.javafxtutorial.datepicker;
+    exports com.coderscratchpad.javafxtutorial.text;
 
     opens com.coderscratchpad.javafxtutorial to javafx.fxml;
     opens com.coderscratchpad.javafxtutorial.button to javafx.fxml;
@@ -27,4 +28,6 @@ module com.coderscratchpad.javafxtutorial {
     opens com.coderscratchpad.javafxtutorial.charts to javafx.fxml;
     exports com.coderscratchpad.javafxtutorial.progressbar;
     opens com.coderscratchpad.javafxtutorial.progressbar to javafx.fxml;
+    exports com.coderscratchpad.javafxtutorial.progressindicator;
+    opens com.coderscratchpad.javafxtutorial.progressindicator to javafx.fxml;
 }
