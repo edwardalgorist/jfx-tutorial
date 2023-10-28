@@ -30,4 +30,6 @@ module com.coderscratchpad.javafxtutorial {
     opens com.coderscratchpad.javafxtutorial.progressbar to javafx.fxml;
     exports com.coderscratchpad.javafxtutorial.progressindicator;
     opens com.coderscratchpad.javafxtutorial.progressindicator to javafx.fxml;
+    exports com.coderscratchpad.javafxtutorial.effects;
+    opens com.coderscratchpad.javafxtutorial.effects to javafx.fxml;
 }
