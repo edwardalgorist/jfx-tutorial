@@ -1,4 +1,4 @@
-package com.coderscratchpad.javafxtutorial.effects;
+package com.coderscratchpad.javafxtutorial.effects.dropshadow;
 
 import javafx.beans.property.DoubleProperty;
 import javafx.collections.FXCollections;

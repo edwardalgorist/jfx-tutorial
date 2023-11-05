@@ -1,4 +1,4 @@
-package com.coderscratchpad.javafxtutorial.effects;
+package com.coderscratchpad.javafxtutorial.effects.reflection;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -14,7 +14,7 @@ import javafx.stage.Stage;
  * Code of the tutorial described on
  * <a href="https://coderscratchpad.com/javafx-reflection-effect/">coderscratchpad.com</a>
  */
-public class ReflectionEffectTopOpacity extends Application {
+public class ReflectionEffectBottomOpacity extends Application {
 
     private static final double WIDTH = 640;
     private static final double HEIGHT = 480;
@@ -28,7 +28,7 @@ public class ReflectionEffectTopOpacity extends Application {
         Scene scene = new Scene(this.parent, WIDTH, HEIGHT);
 
         // Sets the stage title
-        stage.setTitle("Reflection Effect: Top Opacity");
+        stage.setTitle("Reflection Effect: Bottom Opacity");
 
         // Set the stage scene
         stage.setScene(scene);
@@ -54,8 +54,8 @@ public class ReflectionEffectTopOpacity extends Application {
         Reflection reflection = new Reflection();
         reflection.setFraction(0.5); // Adjust the reflection height
 
-        // Sets the top opacity to 0.9 (90% opacity at the top)
-        reflection.setTopOpacity(0.9);
+        // Sets the bottom opacity to 0.9 (90% opacity at the bottom)
+        reflection.setBottomOpacity(0.9);
 
         // Apply the Reflection Effect to the ImageView
         imageView.setEffect(reflection);

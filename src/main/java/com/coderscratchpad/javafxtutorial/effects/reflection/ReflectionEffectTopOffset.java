@@ -1,10 +1,10 @@
-package com.coderscratchpad.javafxtutorial.effects;
+package com.coderscratchpad.javafxtutorial.effects.reflection;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.effect.ColorAdjust;
+import javafx.scene.effect.Reflection;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
@@ -12,9 +12,9 @@ import javafx.stage.Stage;
 
 /**
  * Code of the tutorial described on
- * <a href="https://coderscratchpad.com/javafx-coloradjust-effect/">coderscratchpad.com</a>
+ * <a href="https://coderscratchpad.com/javafx-reflection-effect/">coderscratchpad.com</a>
  */
-public class ColorAdjustEffectExampleApp extends Application {
+public class ReflectionEffectTopOffset extends Application {
 
     private static final double WIDTH = 640;
     private static final double HEIGHT = 480;
@@ -28,7 +28,7 @@ public class ColorAdjustEffectExampleApp extends Application {
         Scene scene = new Scene(this.parent, WIDTH, HEIGHT);
 
         // Sets the stage title
-        stage.setTitle("ColorAdjust Effect");
+        stage.setTitle("Reflection Effect: Top Offset");
 
         // Set the stage scene
         stage.setScene(scene);
@@ -49,24 +49,21 @@ public class ColorAdjustEffectExampleApp extends Application {
 
         ImageView imageView = new ImageView(image);
         imageView.setPreserveRatio(true);
-        imageView.setFitWidth(330);
+        imageView.setFitHeight(300);
 
-        // Create a ColorAdjust effect
-        ColorAdjust colorAdjust = new ColorAdjust();
+        Reflection reflection = new Reflection();
+        reflection.setFraction(0.5); // Adjust the reflection height
 
-        ColorAdjustControlPanel colorAdjustControlPanel = new ColorAdjustControlPanel(colorAdjust);
+        reflection.setTopOffset(5); // Sets the offset to 5 pixels
 
-        // Set the ColorAdjust effect on the ImageView
-        imageView.setEffect(colorAdjust);
+        // Apply the Reflection Effect to the ImageView
+        imageView.setEffect(reflection);
 
-        /* Add the ImageView to the BorderPane right region */
-        this.parent.setRight(imageView);
-        BorderPane.setAlignment(imageView,Pos.CENTER);
+        /* Add the ImageView to the BorderPane top region */
+        this.parent.setTop(imageView);
+        BorderPane.setAlignment(imageView, Pos.CENTER);
         BorderPane.setMargin(imageView, new Insets(15));
-
-        this.parent.setLeft(colorAdjustControlPanel);
 
     }
 
 }
-

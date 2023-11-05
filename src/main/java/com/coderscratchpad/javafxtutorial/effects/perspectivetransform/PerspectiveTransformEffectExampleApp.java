@@ -1,10 +1,10 @@
-package com.coderscratchpad.javafxtutorial.effects;
+package com.coderscratchpad.javafxtutorial.effects.perspectivetransform;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.effect.Reflection;
+import javafx.scene.effect.PerspectiveTransform;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
@@ -12,9 +12,9 @@ import javafx.stage.Stage;
 
 /**
  * Code of the tutorial described on
- * <a href="https://coderscratchpad.com/javafx-reflection-effect/">coderscratchpad.com</a>
+ * <a href="https://coderscratchpad.com/javafx-perspectivetransform-effect/">coderscratchpad.com</a>
  */
-public class ReflectionEffect extends Application {
+public class PerspectiveTransformEffectExampleApp extends Application {
 
     private static final double WIDTH = 640;
     private static final double HEIGHT = 480;
@@ -28,7 +28,7 @@ public class ReflectionEffect extends Application {
         Scene scene = new Scene(this.parent, WIDTH, HEIGHT);
 
         // Sets the stage title
-        stage.setTitle("Reflection Effect");
+        stage.setTitle("PerspectiveTransform Effect");
 
         // Set the stage scene
         stage.setScene(scene);
@@ -49,18 +49,24 @@ public class ReflectionEffect extends Application {
 
         ImageView imageView = new ImageView(image);
         imageView.setPreserveRatio(true);
-        imageView.setFitHeight(300);
+        imageView.setFitWidth(400);
 
-        Reflection reflection = new Reflection();
-        reflection.setFraction(0.5); // Adjust the reflection height
+        // Create the PerspectiveTransform
+        PerspectiveTransform perspectiveTransform = new PerspectiveTransform();
 
-        // Apply the Reflection Effect to the ImageView
-        imageView.setEffect(reflection);
+        // Create the Control Panel for the PerspectiveTransform
+        PerspectiveTransformControlPanel controlPanel = new PerspectiveTransformControlPanel(perspectiveTransform);
 
-        /* Add the ImageView to the BorderPane top region */
-        this.parent.setTop(imageView);
+        // Apply the PerspectiveTransform Effect to the ImageView
+        imageView.setEffect(perspectiveTransform);
+
+        /* Add the ImageView to the BorderPane right region */
+        this.parent.setRight(imageView);
         BorderPane.setAlignment(imageView, Pos.CENTER);
         BorderPane.setMargin(imageView, new Insets(15));
+
+        /* Add the PerspectiveTransformControlPanel to the BorderPane left region */
+        this.parent.setLeft(controlPanel);
 
     }
 

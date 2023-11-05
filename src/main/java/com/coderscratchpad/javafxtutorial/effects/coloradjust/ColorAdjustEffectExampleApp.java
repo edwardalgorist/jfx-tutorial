@@ -1,10 +1,10 @@
-package com.coderscratchpad.javafxtutorial.effects;
+package com.coderscratchpad.javafxtutorial.effects.coloradjust;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.effect.BoxBlur;
+import javafx.scene.effect.ColorAdjust;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
@@ -12,9 +12,9 @@ import javafx.stage.Stage;
 
 /**
  * Code of the tutorial described on
- * <a href="https://coderscratchpad.com/javafx-boxblur-effect/">coderscratchpad.com</a>
+ * <a href="https://coderscratchpad.com/javafx-coloradjust-effect/">coderscratchpad.com</a>
  */
-public class BoxBlurEffectExampleApp extends Application {
+public class ColorAdjustEffectExampleApp extends Application {
 
     private static final double WIDTH = 640;
     private static final double HEIGHT = 480;
@@ -28,7 +28,7 @@ public class BoxBlurEffectExampleApp extends Application {
         Scene scene = new Scene(this.parent, WIDTH, HEIGHT);
 
         // Sets the stage title
-        stage.setTitle("BoxBlur Effect");
+        stage.setTitle("ColorAdjust Effect");
 
         // Set the stage scene
         stage.setScene(scene);
@@ -51,13 +51,13 @@ public class BoxBlurEffectExampleApp extends Application {
         imageView.setPreserveRatio(true);
         imageView.setFitWidth(330);
 
-        // Create the BoxBlur Effect
-        BoxBlur boxBlur = new BoxBlur();
+        // Create a ColorAdjust effect
+        ColorAdjust colorAdjust = new ColorAdjust();
 
-        BoxBlurControlPanel colorAdjustControlPanel = new BoxBlurControlPanel(boxBlur);
+        ColorAdjustControlPanel colorAdjustControlPanel = new ColorAdjustControlPanel(colorAdjust);
 
-        // Set the BoxBlur effect on the ImageView
-        imageView.setEffect(boxBlur);
+        // Set the ColorAdjust effect on the ImageView
+        imageView.setEffect(colorAdjust);
 
         /* Add the ImageView to the BorderPane right region */
         this.parent.setRight(imageView);

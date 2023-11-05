@@ -1,4 +1,4 @@
-package com.coderscratchpad.javafxtutorial.effects;
+package com.coderscratchpad.javafxtutorial.effects.boxblur;
 
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;

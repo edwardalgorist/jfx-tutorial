@@ -1,4 +1,4 @@
-package com.coderscratchpad.javafxtutorial.effects;
+package com.coderscratchpad.javafxtutorial.effects.sepiatone;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;

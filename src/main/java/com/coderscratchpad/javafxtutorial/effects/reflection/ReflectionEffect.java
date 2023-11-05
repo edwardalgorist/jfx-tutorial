@@ -1,10 +1,10 @@
-package com.coderscratchpad.javafxtutorial.effects;
+package com.coderscratchpad.javafxtutorial.effects.reflection;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.effect.DropShadow;
+import javafx.scene.effect.Reflection;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
@@ -12,9 +12,9 @@ import javafx.stage.Stage;
 
 /**
  * Code of the tutorial described on
- * <a href="https://coderscratchpad.com/javafx-dropshadow-effect/">coderscratchpad.com</a>
+ * <a href="https://coderscratchpad.com/javafx-reflection-effect/">coderscratchpad.com</a>
  */
-public class DropShadowEffectExampleApp extends Application {
+public class ReflectionEffect extends Application {
 
     private static final double WIDTH = 640;
     private static final double HEIGHT = 480;
@@ -28,7 +28,7 @@ public class DropShadowEffectExampleApp extends Application {
         Scene scene = new Scene(this.parent, WIDTH, HEIGHT);
 
         // Sets the stage title
-        stage.setTitle("DropShadow Effect");
+        stage.setTitle("Reflection Effect");
 
         // Set the stage scene
         stage.setScene(scene);
@@ -49,24 +49,18 @@ public class DropShadowEffectExampleApp extends Application {
 
         ImageView imageView = new ImageView(image);
         imageView.setPreserveRatio(true);
-        imageView.setFitWidth(280);
+        imageView.setFitHeight(300);
 
-        // Create the DropShadow
-        DropShadow dropShadow = new DropShadow();
+        Reflection reflection = new Reflection();
+        reflection.setFraction(0.5); // Adjust the reflection height
 
-        // Create the Control Panel for the DropShadow
-        DropShadowControlPanel controlPanel = new DropShadowControlPanel(dropShadow);
+        // Apply the Reflection Effect to the ImageView
+        imageView.setEffect(reflection);
 
-        // Apply the DropShadow Effect to the ImageView
-        imageView.setEffect(dropShadow);
-
-        /* Add the ImageView to the BorderPane center region */
-        this.parent.setCenter(imageView);
-        BorderPane.setAlignment(imageView, Pos.CENTER_LEFT);
-        BorderPane.setMargin(imageView, new Insets(20));
-
-        /* Add the DropShadowControlPanel to the BorderPane left region */
-        this.parent.setLeft(controlPanel);
+        /* Add the ImageView to the BorderPane top region */
+        this.parent.setTop(imageView);
+        BorderPane.setAlignment(imageView, Pos.CENTER);
+        BorderPane.setMargin(imageView, new Insets(15));
 
     }
 

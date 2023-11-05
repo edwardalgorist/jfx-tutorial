@@ -1,10 +1,8 @@
-package com.coderscratchpad.javafxtutorial.effects;
+package com.coderscratchpad.javafxtutorial.effects.gausian;
 
 import javafx.application.Application;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.effect.Reflection;
+import javafx.scene.effect.GaussianBlur;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
@@ -12,9 +10,9 @@ import javafx.stage.Stage;
 
 /**
  * Code of the tutorial described on
- * <a href="https://coderscratchpad.com/javafx-reflection-effect/">coderscratchpad.com</a>
+ * <a href="https://coderscratchpad.com/javafx-gaussianblur-effect/">coderscratchpad.com</a>
  */
-public class ReflectionEffectFraction extends Application {
+public class GaussianBlurEffect extends Application {
 
     private static final double WIDTH = 640;
     private static final double HEIGHT = 480;
@@ -28,7 +26,7 @@ public class ReflectionEffectFraction extends Application {
         Scene scene = new Scene(this.parent, WIDTH, HEIGHT);
 
         // Sets the stage title
-        stage.setTitle("Reflection Effect: Fraction");
+        stage.setTitle("Gaussian Blur Image Filter");
 
         // Set the stage scene
         stage.setScene(scene);
@@ -49,20 +47,14 @@ public class ReflectionEffectFraction extends Application {
 
         ImageView imageView = new ImageView(image);
         imageView.setPreserveRatio(true);
-        imageView.setFitHeight(300);
+        imageView.setFitWidth(400);
 
-        Reflection reflection = new Reflection();
+        // Apply the GaussianBlur effect with a radius of 10
+        GaussianBlur blur = new GaussianBlur(10);
+        imageView.setEffect(blur);
 
-        // Sets the fraction to 0.3 (30% of the content visible in the reflection)
-        reflection.setFraction(0.3);
-
-        // Apply the Reflection Effect to the ImageView
-        imageView.setEffect(reflection);
-
-        /* Add the ImageView to the BorderPane top region */
-        this.parent.setTop(imageView);
-        BorderPane.setAlignment(imageView, Pos.CENTER);
-        BorderPane.setMargin(imageView, new Insets(15));
+        /* Add the ImageView to the BorderPane center region */
+        this.parent.setCenter(imageView);
 
     }
 

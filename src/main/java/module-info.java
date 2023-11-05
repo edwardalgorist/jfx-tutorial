@@ -12,6 +12,9 @@ module com.coderscratchpad.javafxtutorial {
     exports com.coderscratchpad.javafxtutorial.button;
     exports com.coderscratchpad.javafxtutorial.datepicker;
     exports com.coderscratchpad.javafxtutorial.text;
+    exports com.coderscratchpad.javafxtutorial.effects.lighting.distant;
+    exports com.coderscratchpad.javafxtutorial.effects.lighting.point;
+    exports com.coderscratchpad.javafxtutorial.effects.lighting.spot;
 
     opens com.coderscratchpad.javafxtutorial to javafx.fxml;
     opens com.coderscratchpad.javafxtutorial.button to javafx.fxml;
@@ -32,4 +35,25 @@ module com.coderscratchpad.javafxtutorial {
     opens com.coderscratchpad.javafxtutorial.progressindicator to javafx.fxml;
     exports com.coderscratchpad.javafxtutorial.effects;
     opens com.coderscratchpad.javafxtutorial.effects to javafx.fxml;
+    exports com.coderscratchpad.javafxtutorial.effects.coloradjust;
+    opens com.coderscratchpad.javafxtutorial.effects.coloradjust to javafx.fxml;
+    exports com.coderscratchpad.javafxtutorial.effects.boxblur;
+    opens com.coderscratchpad.javafxtutorial.effects.boxblur to javafx.fxml;
+    exports com.coderscratchpad.javafxtutorial.effects.colorinput;
+    opens com.coderscratchpad.javafxtutorial.effects.colorinput to javafx.fxml;
+    exports com.coderscratchpad.javafxtutorial.effects.dropshadow;
+    opens com.coderscratchpad.javafxtutorial.effects.dropshadow to javafx.fxml;
+    exports com.coderscratchpad.javafxtutorial.effects.innershadow;
+    opens com.coderscratchpad.javafxtutorial.effects.innershadow to javafx.fxml;
+    exports com.coderscratchpad.javafxtutorial.effects.reflection;
+    opens com.coderscratchpad.javafxtutorial.effects.reflection to javafx.fxml;
+    exports com.coderscratchpad.javafxtutorial.effects.perspectivetransform;
+    opens com.coderscratchpad.javafxtutorial.effects.perspectivetransform to javafx.fxml;
+    exports com.coderscratchpad.javafxtutorial.effects.sepiatone;
+    opens com.coderscratchpad.javafxtutorial.effects.sepiatone to javafx.fxml;
+    exports com.coderscratchpad.javafxtutorial.effects.gausian;
+    opens com.coderscratchpad.javafxtutorial.effects.gausian to javafx.fxml;
+    exports com.coderscratchpad.javafxtutorial.effects.shadow;
+    opens com.coderscratchpad.javafxtutorial.effects.shadow to javafx.fxml;
+
 }
