@@ -16,6 +16,12 @@ public class ClearableTextField extends Application {
     private final BorderPane parent = new BorderPane();
 
     @Override
+    public void start(Stage stage) throws Exception {
+        // Setup and display the stage
+        this.setupStage(stage);
+    }
+
+    @Override
     public void init() throws Exception {
         super.init();
 
@@ -34,14 +40,6 @@ public class ClearableTextField extends Application {
 
         // Add the ClearableTextField to the center of the BorderPane
         this.parent.setCenter(clearableTextField);
-
-    }
-
-    @Override
-    public void start(Stage stage) throws Exception {
-
-        // Setup and display the stage
-        this.setupStage(stage);
 
     }
 

@@ -16,6 +16,14 @@ public class ClearablePasswordField extends Application {
     private final BorderPane parent = new BorderPane();
 
     @Override
+    public void start(Stage stage) throws Exception {
+
+        // Setup and display the stage
+        this.setupStage(stage);
+
+    }
+
+    @Override
     public void init() throws Exception {
         super.init();
 
@@ -34,14 +42,6 @@ public class ClearablePasswordField extends Application {
 
         // Add the ClearablePasswordField to the center of the BorderPane
         this.parent.setCenter(clearablePasswordField);
-
-    }
-
-    @Override
-    public void start(Stage stage) throws Exception {
-
-        // Setup and display the stage
-        this.setupStage(stage);
 
     }
 

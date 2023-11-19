@@ -14,6 +14,14 @@ public class FontSelectionDialogExample extends Application {
     private final BorderPane parent = new BorderPane();
 
     @Override
+    public void start(Stage stage) throws Exception {
+
+        // Setup and display the stage
+        this.setupStage(stage);
+
+    }
+
+    @Override
     public void init() throws Exception {
         super.init();
 
@@ -47,14 +55,6 @@ public class FontSelectionDialogExample extends Application {
 
         // Add the VBox container to the center of the BorderPane
         this.parent.setCenter(container);
-
-    }
-
-    @Override
-    public void start(Stage stage) throws Exception {
-
-        // Setup and display the stage
-        this.setupStage(stage);
 
     }
 
