@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 
 /**
  * Code of the tutorial described on
- * <a href="https://coderscratchpad.com/adding-an-icon-to-your-javafx-stage/">coderscratchpad.com</a>
+ * <a href="https://coderscratchpad.com/customizing-javafx-stage-icons-for-your-applications/">coderscratchpad.com</a>
  */
 public class SettingStageIcon extends Application {
 

@@ -1,0 +1,12 @@
+/* styles.css */
+
+.fab-button {
+    -fx-background-color: #007bff; /* Change to your desired background color */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-shape: "M16 0 A16 16 0 1 0 32 16 A16 16 0 0 0 16 0"; /* Circular shape path */
+    -fx-min-width: 32px;
+    -fx-min-height: 32px;
+    -fx-pref-width: 32px;
+    -fx-pref-height: 32px;
+}
