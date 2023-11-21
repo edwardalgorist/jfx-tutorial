@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      spacing="10"
+      style="-fx-padding: 30px;"
+      fx:controller="com.coderscratchpad.javafxtutorial.fxml.TodoController">
+
+    <TextField fx:id="taskInput" promptText="Enter a task" />
+    <Button text="Add" onAction="#addTask" />
+    <ListView fx:id="taskList" />
+
+</VBox>

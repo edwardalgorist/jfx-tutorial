@@ -9,6 +9,12 @@ module com.coderscratchpad.javafxtutorial {
     requires java.prefs;
     requires de.jensd.fx.glyphs.fontawesome;
     requires org.controlsfx.controls;
+    requires com.google.gson;
+    requires MathParser.org.mXparser;
+    requires fxribbon;
+    requires batik.all;
+    requires org.apache.poi.poi;
+    requires org.apache.poi.ooxml;
 
     exports com.coderscratchpad.javafxtutorial;
     exports com.coderscratchpad.javafxtutorial.button;
@@ -48,6 +54,29 @@ module com.coderscratchpad.javafxtutorial {
     exports com.coderscratchpad.javafxtutorial.tilepane;
     exports com.coderscratchpad.javafxtutorial.treetableview;
     exports com.coderscratchpad.javafxtutorial.fontawesomeicons;
+    exports com.coderscratchpad.javafxtutorial.internationalization;
+    exports com.coderscratchpad.javafxtutorial.dnd;
+    exports com.coderscratchpad.javafxtutorial.qrcode;
+    exports com.coderscratchpad.javafxtutorial.mediaplayer;
+    exports com.coderscratchpad.javafxtutorial.customcursors;
+    exports com.coderscratchpad.javafxtutorial.rest;
+    exports com.coderscratchpad.javafxtutorial.currencyconverter;
+    exports com.coderscratchpad.javafxtutorial.concurrency;
+    exports com.coderscratchpad.javafxtutorial.databinding;
+    exports com.coderscratchpad.javafxtutorial.clipboard;
+    exports com.coderscratchpad.javafxtutorial.screenshot;
+    exports com.coderscratchpad.javafxtutorial.animation;
+    exports com.coderscratchpad.javafxtutorial.splashscreen;
+    exports com.coderscratchpad.javafxtutorial.graphiccalculator;
+    exports com.coderscratchpad.javafxtutorial.ribbonmenus;
+    exports com.coderscratchpad.javafxtutorial.svg;
+
+    exports com.coderscratchpad.javafxtutorial.excel.displaying;
+    exports com.coderscratchpad.javafxtutorial.excel.exporting;
+
+    exports com.coderscratchpad.javafxtutorial.canvas.clearing;
+    exports com.coderscratchpad.javafxtutorial.canvas.translation;
+
     exports com.coderscratchpad.javafxtutorial.controlsfx;
     exports com.coderscratchpad.javafxtutorial.controlsfx.popover;
     exports com.coderscratchpad.javafxtutorial.controlsfx.ratingcontrol;
@@ -59,6 +88,7 @@ module com.coderscratchpad.javafxtutorial {
     exports com.coderscratchpad.javafxtutorial.controlsfx.plusminusslider;
     exports com.coderscratchpad.javafxtutorial.controlsfx.autocompletion;
     exports com.coderscratchpad.javafxtutorial.controlsfx.clearabletextfield;
+    exports com.coderscratchpad.javafxtutorial.controlsfx.textfieldicons;
 
     opens com.coderscratchpad.javafxtutorial to javafx.fxml;
     opens com.coderscratchpad.javafxtutorial.button to javafx.fxml;
@@ -99,5 +129,22 @@ module com.coderscratchpad.javafxtutorial {
     opens com.coderscratchpad.javafxtutorial.effects.gausian to javafx.fxml;
     exports com.coderscratchpad.javafxtutorial.effects.shadow;
     opens com.coderscratchpad.javafxtutorial.effects.shadow to javafx.fxml;
+    exports com.coderscratchpad.javafxtutorial.canvas;
+    opens com.coderscratchpad.javafxtutorial.canvas to javafx.fxml;
+    exports com.coderscratchpad.javafxtutorial.canvas.arc;
+    opens com.coderscratchpad.javafxtutorial.canvas.arc to javafx.fxml;
+    exports com.coderscratchpad.javafxtutorial.canvas.oval;
+    opens com.coderscratchpad.javafxtutorial.canvas.oval to javafx.fxml;
+    exports com.coderscratchpad.javafxtutorial.canvas.rectangle;
+    opens com.coderscratchpad.javafxtutorial.canvas.rectangle to javafx.fxml;
+    exports com.coderscratchpad.javafxtutorial.canvas.line;
+    opens com.coderscratchpad.javafxtutorial.canvas.line to javafx.fxml;
+    exports com.coderscratchpad.javafxtutorial.canvas.text;
+    opens com.coderscratchpad.javafxtutorial.canvas.text to javafx.fxml;
+
+    exports com.coderscratchpad.javafxtutorial.fxml;
+    opens com.coderscratchpad.javafxtutorial.fxml to javafx.fxml;
+    opens com.coderscratchpad.javafxtutorial.mediaplayer to javafx.fxml;
+
 
 }
