@@ -15,6 +15,7 @@ module com.coderscratchpad.javafxtutorial {
     requires batik.all;
     requires org.apache.poi.poi;
     requires org.apache.poi.ooxml;
+    requires com.dlsc.phonenumberfx;
 
     exports com.coderscratchpad.javafxtutorial;
     exports com.coderscratchpad.javafxtutorial.button;
@@ -70,6 +71,7 @@ module com.coderscratchpad.javafxtutorial {
     exports com.coderscratchpad.javafxtutorial.graphiccalculator;
     exports com.coderscratchpad.javafxtutorial.ribbonmenus;
     exports com.coderscratchpad.javafxtutorial.svg;
+    exports com.coderscratchpad.javafxtutorial.phonenumberfield;
 
     exports com.coderscratchpad.javafxtutorial.excel.displaying;
     exports com.coderscratchpad.javafxtutorial.excel.exporting;

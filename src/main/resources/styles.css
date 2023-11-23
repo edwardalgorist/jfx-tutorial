@@ -10,3 +10,10 @@
     -fx-pref-width: 32px;
     -fx-pref-height: 32px;
 }
+
+/* Sample CSS for styling PhoneNumberField */
+.phone-number-field {
+    -fx-background-color: #d2f3f3; /* Set background color */
+    -fx-padding: 10px; /* Set padding */
+    -fx-border-color: cornflowerblue; /* set border-color */
+}
