@@ -16,6 +16,7 @@ module com.coderscratchpad.javafxtutorial {
     requires org.apache.poi.poi;
     requires org.apache.poi.ooxml;
     requires com.dlsc.phonenumberfx;
+    requires libphonenumber;
 
     exports com.coderscratchpad.javafxtutorial;
     exports com.coderscratchpad.javafxtutorial.button;
