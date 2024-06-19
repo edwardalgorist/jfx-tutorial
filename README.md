@@ -1,7 +1,7 @@
 # JavaFX Tutorials
 
 This project contains the sources of the various JavaFX tutorials that are published
-on [coderscratchpad.com](https://coderscratchpad.com).
+on [coderscratchpad.com](https://coderscratchpad.com). They are also used in the [Learn JavaFX section on jfx-central.com](https://www.jfx-central.com/learn-javafx).
 
 ## Prerequisites
 
